@@ -1,4 +1,4 @@
-with open('./day-02.txt') as file:
+with open('inputs/day-02.txt') as file:
     rounds = file.read().split('\n')
 
 # Part 1
@@ -13,6 +13,8 @@ outcomeP1 = {
     'C Y': 0+2,
     'C Z': 3+3,
 }
+resultP1 = sum([outcomeP1[x] for x in rounds])
+print(resultP1)
 
 # Part 2
 outcomeP2 = {
@@ -26,9 +28,5 @@ outcomeP2 = {
     'C Y': 3+3,
     'C Z': 6+1,
 }
-
-resultP1 = sum(map(lambda x: outcomeP1[x], rounds))
-print(resultP1)
-
-resultP2 = sum(map(lambda x: outcomeP2[x], rounds))
+resultP2 = sum([outcomeP2[x] for x in rounds])
 print(resultP2)

@@ -4,7 +4,7 @@ def findPriority(item):
     else:
         return ord(item)-38
 
-with open('./day-03.txt') as file:
+with open('inputs/day-03.txt') as file:
     rucksacks = file.read().split('\n')
 
 # Part 1
