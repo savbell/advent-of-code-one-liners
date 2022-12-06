@@ -8,7 +8,8 @@ with open('inputs/day-03.txt') as file:
     rucksacks = file.read().split('\n')
 
 # Part 1
-sharedItems = [set(x).intersection(y).pop() for x, y in [[i[:len(i)//2], i[len(i)//2:]] for i in rucksacks]]
+splitRucksacks = [[i[:len(i)//2], i[len(i)//2:]] for i in rucksacks]
+sharedItems = [set(x).intersection(y).pop() for x, y in splitRucksacks]
 priorityTotal = sum([findPriority(x) for x in sharedItems])
 print(priorityTotal)
 

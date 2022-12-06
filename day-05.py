@@ -9,7 +9,8 @@ def getCrates(input):
 with open('inputs/day-05.txt') as file:
     input = file.read().split('\n')
 
-moves = [[int(x[1]), int(x[3]), int(x[5])] for x in [y.split(' ') for y in input[10:]]]
+moves = [y.split(' ') for y in input[10:]]
+moves = [[int(x[1]), int(x[3]), int(x[5])] for x in moves]
 
 # Part 1
 crates = getCrates(input)

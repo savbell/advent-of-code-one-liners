@@ -11,8 +11,8 @@ print('Day 03 Part 1:', sum([ord(x)-96 if x.islower() else ord(x)-38 for x in [s
 print('Day 03 Part 2:', sum([ord(x)-96 if x.islower() else ord(x)-38 for x in [set(open('inputs/day-03.txt').read().split('\n')[i]).intersection(open('inputs/day-03.txt').read().split('\n')[i+1]).intersection(open('inputs/day-03.txt').read().split('\n')[i+2]).pop() for i in range(0,len(open('inputs/day-03.txt').read().split('\n')),3)]]))
 
 # Day 04
-print('Day 04 Part 1:', sum([(x[0][0] >= x[1][0] and x[0][1] <= x[1][1]) or (x[0][0] <= x[1][0] and x[0][1] >= x[1][1]) for x in [[list(map(int, a.split('-'))), list(map(int, b.split('-')))] for a, b in [x.split(',') for x in open('inputs/day-04.txt').read().split('\n')]]]))
-print('Day 04 Part 2:', sum([x[0][0] <= x[1][1] and x[0][1] >= x[1][0] for x in [[list(map(int, a.split('-'))), list(map(int, b.split('-')))] for a, b in [x.split(',') for x in open('inputs/day-04.txt').read().split('\n')]]]))
+print('Day 04 Part 1:', sum([(n[0][0] >= n[1][0] and n[0][1] <= n[1][1]) or (n[0][0] <= n[1][0] and n[0][1] >= n[1][1]) for n in [[[int(x) for x in a.split('-')], [int(y) for y in b.split('-')]] for a, b in [x.split(',') for x in open('inputs/day-04.txt').read().split('\n')]]]))
+print('Day 04 Part 2:', sum([n[0][0] <= n[1][1] and n[0][1] >= n[1][0] for n in [[[int(x) for x in a.split('-')], [int(y) for y in b.split('-')]] for a, b in [x.split(',') for x in open('inputs/day-04.txt').read().split('\n')]]]))
 
 # Day 05 - This one is a bit cheese but I'm doing my best. Requires Python 3.8 (https://peps.python.org/pep-0572/)
 print('Day 05 Part 1:', ''.join([c[0] for c in crates] if not (input := open('inputs/day-05.txt').read().split('\n')) or not (moves := [[int(x[1]), int(x[3]), int(x[5])] for x in [y.split(' ') for y in input[10:]]]) or not (crates := [[] for i in range(9)]) or not [crates[j//4].append(line[j]) for line in input[:8] for j in range(1,len(line),4) if line[j].isalpha()] or [crates[move[2]-1].insert(0, crates[move[1]-1].pop(0)) for move in moves for n in range(move[0])] else ''))
