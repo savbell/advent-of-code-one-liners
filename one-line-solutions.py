@@ -17,3 +17,7 @@ print('Day 04 Part 2:', sum([x[0][0] <= x[1][1] and x[0][1] >= x[1][0] for x in 
 # Day 05 - This one is a bit cheese but I'm doing my best. Requires Python 3.8 (https://peps.python.org/pep-0572/)
 print('Day 05 Part 1:', ''.join([c[0] for c in crates] if not (input := open('inputs/day-05.txt').read().split('\n')) or not (moves := [[int(x[1]), int(x[3]), int(x[5])] for x in [y.split(' ') for y in input[10:]]]) or not (crates := [[] for i in range(9)]) or not [crates[j//4].append(line[j]) for line in input[:8] for j in range(1,len(line),4) if line[j].isalpha()] or [crates[move[2]-1].insert(0, crates[move[1]-1].pop(0)) for move in moves for n in range(move[0])] else ''))
 print('Day 05 Part 2:', ''.join([c[0] for c in crates] if not (input := open('inputs/day-05.txt').read().split('\n')) or not (moves := [[int(x[1]), int(x[3]), int(x[5])] for x in [y.split(' ') for y in input[10:]]]) or not (crates := [[] for i in range(9)]) or not [crates[j//4].append(line[j]) for line in input[:8] for j in range(1,len(line),4) if line[j].isalpha()] or [crates[move[2]-1].insert(0, item) for move in moves for item in reversed([crates[move[1]-1].pop(0) for n in range(move[0])])] else ''))
+
+# Day 06
+print('Day 06 Part 1:', [i+1 for x in [open('inputs/day-06.txt').read()] for i in range(3,len(x)) if len(set(x[i-3:i+1])) == 4][0])
+print('Day 06 Part 2:', [i+1 for x in [open('inputs/day-06.txt').read()] for i in range(13,len(x)) if len(set(x[i-13:i+1])) == 14][0])
