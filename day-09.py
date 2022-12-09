@@ -3,46 +3,50 @@ with open('inputs/day-09.txt') as file:
 
 moves = [x.split(' ') for x in moves]
 
-def move(d, t, h):
+def move(d, h, t):
     if d == 'R':
-        if t[1] == h[1] and t[0] == h[0]-1:
-            t[0] += 1
-        elif t[1] > h[1] and t[0] == h[0]-1:
-            t[0] += 1
-            t[1] -= 1
-        elif t[1] < h[1] and t[0] == h[0]-1:
-            t[0] += 1
-            t[1] += 1
+        if t[0] == h[0]-1:
+            if t[1] == h[1]:
+                t[0] += 1
+            elif t[1] > h[1]:
+                t[0] += 1
+                t[1] -= 1
+            elif t[1] < h[1]:
+                t[0] += 1
+                t[1] += 1
         h[0] += 1
     elif d == 'L':
-        if t[1] == h[1] and t[0] == h[0]+1:
-            t[0] -= 1
-        elif t[1] > h[1] and t[0] == h[0]+1:
-            t[0] -= 1
-            t[1] -= 1
-        elif t[1] < h[1] and t[0] == h[0]+1:
-            t[0] -= 1
-            t[1] += 1
+        if t[0] == h[0]+1:
+            if t[1] == h[1]:
+                t[0] -= 1
+            elif t[1] > h[1]:
+                t[0] -= 1
+                t[1] -= 1
+            elif t[1] < h[1]:
+                t[0] -= 1
+                t[1] += 1
         h[0] -= 1
     elif d == 'U':
-        if t[1] == h[1]-1 and t[0] == h[0]:
-            t[1] += 1
-        elif t[1] == h[1]-1 and t[0] < h[0]:
-            t[0] += 1
-            t[1] += 1
-        elif t[1] == h[1]-1 and t[0] > h[0]:
-            t[0] -= 1
-            t[1] += 1
+        if t[1] == h[1]-1:
+            if t[0] == h[0]:
+                t[1] += 1
+            elif t[0] < h[0]:
+                t[0] += 1
+                t[1] += 1
+            elif t[0] > h[0]:
+                t[0] -= 1
+                t[1] += 1
         h[1] += 1
     elif d == 'D':
-        if t[1] == h[1]+1 and t[0] == h[0]:
-            t[1] -= 1
-        elif t[1] == h[1]+1 and t[0] < h[0]:
-            t[0] += 1
-            t[1] -= 1
-        elif t[1] == h[1]+1 and t[0] > h[0]:
-            t[0] -= 1
-            t[1] -= 1
+        if t[1] == h[1]+1:
+            if t[0] == h[0]:
+                t[1] -= 1
+            elif t[0] < h[0]:
+                t[0] += 1
+                t[1] -= 1
+            elif t[0] > h[0]:
+                t[0] -= 1
+                t[1] -= 1
         h[1] -= 1
 
 # Part 1
