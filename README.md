@@ -17,6 +17,7 @@ Note that per copyright and [Eric Wastl's request](https://www.reddit.com/r/adve
 | Day | Part 1 | Part 2 | Commentary |
 |-----|--------|--------|------------|
 | [01](2023/day-01.py) | ✅ | ✅ | This year, I'm removing my "no imports" restriction 😅 |
+| [02](2023/day-02.py) | ✅ | ✅ | Getting in a lot of RegEx practice this year! |
 
 ### 2022 Solutions
 Currently I am not working on 2022 problems, but this is where I left off:
