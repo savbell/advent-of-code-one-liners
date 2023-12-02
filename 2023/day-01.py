@@ -26,7 +26,7 @@ for l in lines:
 print('Day 01 Part 1:', calibration)
 
 ########################## PART 1: ONE-LINE SOLUTION ##########################
-print('Day 01 Part 1:', sum([int(re.findall(r'\d', l)[0] + re.findall(r'\d', l)[-1]) for l in q[1].split('\n')]))
+print('Day 01 Part 1:',sum([int(re.findall(r'\d', l)[0] + re.findall(r'\d', l)[-1]) for l in q[1].split('\n')]))
 
 
 ######################### PART 2: MULTI-LINE SOLUTION #########################
@@ -53,4 +53,4 @@ for l in lines:
 print('Day 01 Part 2:', calibration)
 
 ########################## PART 2: ONE-LINE SOLUTION ##########################
-print('Day 01 Part 2:', sum([int(''.join([{'one':'1','two':'2','three':'3','four':'4','five':'5','six':'6','seven':'7','eight':'8','nine':'9'}[d] if d.isalpha() else d for d in [digits[0], digits[-1]]])) for l in q[1].split('\n') for digits in [re.findall(r'(?=(\d|one|two|three|four|five|six|seven|eight|nine))', l)]]))
+print('Day 01 Part 2:',sum([int(''.join([{'one':'1','two':'2','three':'3','four':'4','five':'5','six':'6','seven':'7','eight':'8','nine':'9'}[d] if d.isalpha() else d for d in [n[0], n[-1]]])) for l in q[1].split('\n') for n in [re.findall(r'(?=(\d|one|two|three|four|five|six|seven|eight|nine))', l)]]))
