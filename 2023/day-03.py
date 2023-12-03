@@ -56,14 +56,14 @@ for x, line in enumerate(q[3].split('\n')):
     symbols = re.finditer(r'[*]', line)
     for s in symbols:
         symbol_coords.append([s.group(), (x, s.start()), []])
-adj_nums = []
 for n in num_coords:
     for c in n[1]:
         for s in symbol_coords:
             if abs(c[0] - s[1][0]) <= 1 and abs(c[1] - s[1][1]) <= 1:
                 s[2].append(n) if n not in s[2] else 0
                 break
+
 print('Day 03 Part 2:', sum([s[2][0][0] * s[2][1][0] for s in symbol_coords if len(s[2]) == 2]))
 
 ########################## PART 2: ONE-LINE SOLUTION ##########################
-# Still working on it...
+print('Day 03 Part 2:',(r:=[[s.group(),(x,s.start()),[]] for x,l in enumerate(q[3].split('\n')) for s in re.finditer(r'[*]',l)]) and [s[2].append(n) if n not in s[2] else 0 for n in [[int(n.group()),[(x,n.start()+i) for i in range(len(n.group()))]] for x,l in enumerate(q[3].split('\n')) for n in re.finditer(r'\d+',l)] for c in n[1] for s in r if abs(c[0]-s[1][0])<=1 and abs(c[1]-s[1][1])<=1] and sum([s[2][0][0]*s[2][1][0] for s in r if len(s[2])==2]))
