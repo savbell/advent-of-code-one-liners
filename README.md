@@ -50,9 +50,19 @@ Within each year's folder:
 
 
 ## Fun Stuff
-I've also created a visualization to show how many characters in 2022's The Beast are used to solve each day/part as of Day 10!
+### Brief Strategy Explanations
+Here are some fun ways I've been able to convert Python statements that normally require their own line into one-line expressions:
+- **List comprehensions:** This entire thing wouldn't be possible without Python's [list comprehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions), which allows you to have `for` and `if` statements within a single expression/line.
+- **Short-circuit (lazy) evaluation:** Python has [short-circuit evaluation for its Boolean operations](https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not), which means the second expression in a Boolean operation is only evaluated if the result of the first expression does not guarantee the final result of the expression. This allows me to strategically use `and` and `or` to determine the order that expressions are executed, skipping around when necessary.
+- **In-line assignment operator:** The [Walrus operator (`:=`)](https://docs.python.org/3/whatsnew/3.8.html#assignment-expressions) allows you to create and assign variables within an expression. I discovered it trying to parse [Day 5 in 2022](2022/day-05.py), and it has since been a hard carry.
+- **Updating a list element in-line:** Since the assignment operator cannot be used with subscripts, it cannot be used to update lists (e.g. `a[0] := 1` is invalid). Since there is no built-in method to update list elements without subscripts (that I'm aware of), I had to get creative. My solution is to pop the element, modify it, and then insert it back into the same position (discovered on [Day 9 in 2022](2022/day-09.py)). For example: `x.insert(0, x.pop(0)+1)`.
+- **In-line import statements:** After not using import statements in 2022 since it would technically make my solutions more than one line, I discovered the built-in [`__import__()`](https://docs.python.org/3/library/functions.html#import__) function in 2023 that has finally allowed me to use [RegEx](images/2023-day-03-regex-meme.png) in my solutions.
+- **My `while` loop within a list comprehension:** I was very proud of discovering this while working on [2022's Day 8](2022/day-08.py). Since I wanted my list comprehension to end execution once a condition was met, I had a tracker variable turn `True` when it was and included it in the `for` condition. But to do this in a single line, I needed to add another `if` condition that simply creates and assigns the tracker variable `False`, making sure it ran before the main list comprehension was calculated. An example line with a tracker variable called `found`: `[(x < t[r][c]) or (found:=True) for x in t[r][:c][::-1] if not found] if not (found:=False) else ''`
 
-<img src="./images/2022-day-10-beast-length.png" alt="A snake with rainbow bands where each colour corresponds to how many characters were used to solve each Advent of Code problem" width="750" height="600">
+### Images
+I created a visualization to show how many characters in 2022's The Beast are used to solve each day/part as of Day 10!
+
+<img src="./images/2022-day-10-beast-length.png" alt="A snake with rainbow bands where each colour corresponds to how many characters were used to solve each Advent of Code problem" width="625" height="500">
 
 Other memes can be found in the [images](https://github.com/savbell/advent-of-code-one-liners/blob/master/images/) folder.
 
