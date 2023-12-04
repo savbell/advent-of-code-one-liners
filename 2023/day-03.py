@@ -36,8 +36,8 @@ for n in num_coords:
             if abs(c[0] - s[1][0]) <= 1 and abs(c[1] - s[1][1]) <= 1:
                 adj_nums.append(n) if n not in adj_nums else 0
                 break
-print('Day 03 Part 1:', sum([int(n[0]) for n in adj_nums]))
-        
+
+print('Day 03 Part 1:', sum([int(n[0]) for n in adj_nums]))       
 
 ########################## PART 1: ONE-LINE SOLUTION ##########################
 print('Day 03 Part 1:',sum([int(n[0]) for n in [[n.group(),[(x,n.start()+i) for i in range(len(n.group()))]] for x,l in enumerate(q[3].split('\n')) for n in re.finditer(r'\d+',l)] if any([abs(c[0]-s[1][0])<=1 and abs(c[1]-s[1][1])<=1 for c in n[1] for s in [[s.group(),(x, s.start())] for x,l in enumerate(q[3].split('\n')) for s in re.finditer(r'[^.\d]',l)]])]))
