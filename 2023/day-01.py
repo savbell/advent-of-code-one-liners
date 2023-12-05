@@ -26,7 +26,7 @@ for l in lines:
 print('Day 01 Part 1:', calibration)
 
 ########################## PART 1: ONE-LINE SOLUTION ##########################
-print('Day 01 Part 1:',sum([int(re.findall(r'\d', l)[0] + re.findall(r'\d', l)[-1]) for l in q[1].split('\n')]))
+print('Day 01 Part 1:',sum([(d:=re.findall(r'\d',l)) and int(d[0]+d[-1]) for l in q[1].split('\n')]))
 
 
 ######################### PART 2: MULTI-LINE SOLUTION #########################

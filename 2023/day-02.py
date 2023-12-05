@@ -45,4 +45,4 @@ for g in games:
 print('Day 02 Part 2:', power)
 
 ########################## PART 2: ONE-LINE SOLUTION ##########################
-print('Day 02 Part 2:',sum([max([int(d[0]) for d in re.findall(r'(\d+)\s+(\w+)',g[1]) if d[1]=='red'])*max([int(d[0]) for d in re.findall(r'(\d+)\s+(\w+)',g[1]) if d[1]=='green'])*max([int(d[0]) for d in re.findall(r'(\d+)\s+(\w+)',g[1]) if d[1]=='blue']) for g in re.findall(r'(\d+):((?: *\d+\s+\w+,?;?)+)',q[2])]))
+print('Day 02 Part 2:',sum([(m:=re.findall(r'(\d+)\s+(\w+)',g[1])) and max([int(d[0]) for d in m if d[1]=='red'])*max([int(d[0]) for d in m if d[1]=='green'])*max([int(d[0]) for d in m if d[1]=='blue']) for g in re.findall(r'(\d+):((?: *\d+\s+\w+,?;?)+)',q[2])]))

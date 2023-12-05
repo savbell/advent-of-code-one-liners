@@ -18,20 +18,20 @@ q = { 4: open(input_file).read() }
 
 ######################### PART 1: MULTI-LINE SOLUTION #########################
 nums = re.findall(r': +((?:\d+\s+)+)\| +((?:\d+\s*)+)', q[4])
-nums = [(list(map(int, n[0].split())), list(map(int, n[1].split()))) for n in nums]
-nums = [set(n[0]).intersection(set(n[1])) for n in nums]
+nums = [(set(map(int, n[0].split())), set(map(int, n[1].split()))) for n in nums]
+nums = [n[0].intersection(n[1]) for n in nums]
 scores = [2 ** (len(n) - 1) if len(n) > 0 else 0 for n in nums]
 
 print('Day 04 Part 1:', sum(scores))
 
 ########################## PART 1: ONE-LINE SOLUTION ##########################
-print('Day 04 Part 1:',sum([2**(len(n)-1) if len(n)>0 else 0 for n in [set(n[0]).intersection(set(n[1])) for n in [(list(map(int,n[0].split())), list(map(int,n[1].split()))) for n in re.findall(r': +((?:\d+\s+)+)\| +((?:\d+\s*)+)', q[4])]]]))
+print('Day 04 Part 1:',sum([2**(len(n)-1) if len(n)>0 else 0 for n in [n[0].intersection(n[1]) for n in [(set(map(int,n[0].split())),set(map(int,n[1].split()))) for n in re.findall(r': +((?:\d+\s+)+)\| +((?:\d+\s*)+)',q[4])]]]))
 
 
 ######################### PART 2: MULTI-LINE SOLUTION #########################
 nums = re.findall(r'\d+: +((?:\d+\s+)+)\| +((?:\d+\s*)+)', q[4])
-nums = [(list(map(int, n[0].split())), list(map(int, n[1].split()))) for n in nums]
-nums = [[1, len(set(n[0]).intersection(set(n[1])))] for n in nums]
+nums = [(set(map(int, n[0].split())), set(map(int, n[1].split()))) for n in nums]
+nums = [[1, len(n[0].intersection(n[1]))] for n in nums]
 total_cards = 0
 for i, n in enumerate(nums):
     total_cards += n[0]
@@ -42,4 +42,4 @@ for i, n in enumerate(nums):
 print('Day 04 Part 2:', total_cards)
 
 ########################## PART 2: ONE-LINE SOLUTION ##########################
-print('Day 04 Part 2:',((c:=[[1,len(set(n[0]).intersection(set(n[1])))] for n in [(list(map(int,n[0].split())), list(map(int,n[1].split()))) for n in re.findall(r'\d+: +((?:\d+\s+)+)\| +((?:\d+\s*)+)',q[4])]]) and not (t:=0) and [(t:=t+n[0]) and [c.__setitem__(i+j,[c[i+j][0]+1,c[i+j][1]]) for _ in range(n[0]) for j in range(1,n[1]+1)] for i, n in enumerate(c)] and t))
+print('Day 04 Part 2:',((c:=[[1,len(n[0].intersection(n[1]))] for n in [(set(map(int,n[0].split())), set(map(int,n[1].split()))) for n in re.findall(r'\d+: +((?:\d+\s+)+)\| +((?:\d+\s*)+)',q[4])]]) and not (t:=0) and [(t:=t+n[0]) and [c.__setitem__(i+j,[c[i+j][0]+1,c[i+j][1]]) for _ in range(n[0]) for j in range(1,n[1]+1)] for i, n in enumerate(c)] and t))

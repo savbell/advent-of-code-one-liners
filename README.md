@@ -20,6 +20,8 @@ Note that per copyright and [Eric Wastl's request](https://www.reddit.com/r/adve
 | [02](2023/day-02.py) | ✅ | ✅ | Getting in a lot of RegEx practice this year! |
 | [03](2023/day-03.py) | ✅ | ✅ | Oh boy, the amount of RegEx I'm using is slowing down my computer... and [the Walrus](https://docs.python.org/3/whatsnew/3.8.html#assignment-expressions) is back! |
 | [04](2023/day-04.py) | ✅ | ✅ | Pulling out some [dunder (magic) methods](https://docs.python.org/3/reference/datamodel.html#special-method-names) for this one! |
+| [05](2023/day-05.py) | ✅ | ❌ | `lambda`s are making their first appearance... |
+| [The Basilisk](2023/the-basilisk.py) ||| A single line of code that combines all of the above days' solutions into one! |
 
 ### 2022 Solutions
 Currently I am not working on 2022 problems, but this is where I left off:
@@ -40,6 +42,7 @@ Currently I am not working on 2022 problems, but this is where I left off:
 | [12](2022/day-12.py)  | ⭐     | ⭐     |  |
 | [13](2022/day-13.py)  | ✍     | ❌     |  |
 | [14](2022/day-14.py)  | ✅     | ✅     |  |
+| [The Beast](2022/the-beast.py) ||| A single line of code that combines all of the above days' solutions into one! |
 
 
 ## Repo Organization
