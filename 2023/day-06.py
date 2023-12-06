@@ -40,11 +40,11 @@ for r in races:
 
 print('Day 06 Part 1:',total)
 
-# ########################## PART 1: ONE-LINE SOLUTION ##########################
+########################## PART 1: ONE-LINE SOLUTION ##########################
 print('Day 06 Part 1:',(so:=lambda b,c:[(b+((b**2)-(4*c))**0.5)/2,(b-((b**2)-(4*c))**0.5)/2]) and (h:=lambda i:int(i[1])-int(i[0]) if i[0]<i[1] else int(i[0])-int(i[1]) if i[0]%1!=0 else int(i[0])-int(i[1])-1) and (u:=[int(n) for n in re.findall(r'\d+',q[6])]) and reduce(lambda a,b:a*b,[h(so(r[0], r[1])) for r in [[u[i],u[i+int(len(u)/2)]] for i in range(int(len(u)/2))]]))
 
 
-######################### PART 2: MULTI-LINE SOLUTION #########################
+######################## PART 2: MULTI-LINE SOLUTION ##########################
 def solve(b, c):
     return [(b+((b**2)-(4*c))**0.5)/2, (b-((b**2)-(4*c))**0.5)/2]
 
