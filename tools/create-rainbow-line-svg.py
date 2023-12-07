@@ -11,7 +11,7 @@ import re
 
 ################################## OPTIONS ##################################
 svg_path = 'images/rainbow_line_visualization.svg'
-color_mapping = 'rainbow'    # https://matplotlib.org/stable/users/explain/colors/colormaps.html
+color_mapping = 'turbo'    # https://matplotlib.org/stable/users/explain/colors/colormaps.html
 
 
 ################################# FUNCTIONS #################################
