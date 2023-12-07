@@ -64,7 +64,8 @@ Below is an example vizualization of the length of each day's solution in The Ba
 
 ### Tools
 - **[`create-rainbow-line-svg.py`](tools/create-rainbow-line-svg.py)**: Creates a rainbow line SVG image from a list of numbers, with each band a calculated percent of the whole. Used to automatically generate the colours and proportions for the visualization above. Also included is a small tool for calculating the character counts in my one-line combined solutions, e.g. [The Basilisk](2023/the-basilisk.py).
-- Other tools are being cleaned up before being shared...
+- **[`create-blank-solution.py`](tools/create-blank-solution.py)**: Creates a new file with a blank solution template for the given year and day. Written explicitly for myself, but feel free to modify it for your personal use if you'd like.
+- **[`import-input.py`](tools/import-input.py)**: Requests the AoC server for a given day's input and saves it as a new text file. Try to [limit your use](https://www.reddit.com/r/adventofcode/wiki/faqs/automation/) of this tool to once per day.
 
 ## Some Strategy Explanations
 Here are some fun ways I've been able to convert Python statements that normally require their own line into one-line expressions:
