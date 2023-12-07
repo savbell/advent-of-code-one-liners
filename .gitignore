@@ -1,5 +1,6 @@
 # Ignore input files
 *.txt
 
-# Ignore personal testing files
+# Ignore personal working files
 */scratchpad.py
+*.ai
