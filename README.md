@@ -22,6 +22,7 @@ Note that per copyright and [Eric Wastl's request](https://www.reddit.com/r/adve
 | [04](2023/day-04.py) | ✅ | ✅ | Pulling out some [dunder (magic) methods](https://docs.python.org/3/reference/datamodel.html#special-method-names) for this one! |
 | [05](2023/day-05.py) | ✅ | ✅ | `lambda`s are making their first appearance... And credit to [Dylan Gray](https://github.com/DylanDmitri) for his immense help with my Part 2 OG solution! |
 | [06](2023/day-06.py) | ✅ | ✅ | `reduce` has joined the fray! |
+| [07](2023/day-07.py) | ✅ | ✅ | First solution I didn't use RegEx... there goes that challenge for myself 😂 |
 | [The Basilisk](2023/the-basilisk.py) ||| A single line of code that combines all of the above days' solutions into one! |
 
 ### 2022 Solutions
