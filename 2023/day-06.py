@@ -14,7 +14,7 @@ from functools import reduce
 input_file = '2023/day-06.txt'
 
 # To match the format of input files for the Basilisk.
-q = { 6: open(input_file).read() }
+q = { 6: open(input_file).read().strip() }
 
 
 ######################### PART 1: MULTI-LINE SOLUTION #########################

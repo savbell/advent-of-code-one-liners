@@ -13,7 +13,7 @@ from itertools import groupby
 input_file = '2023/day-07.txt'
 
 # To match the format of input files for the Basilisk.
-q = { 7: open(input_file).read() }
+q = { 7: open(input_file).read().strip() }
 
 
 ######################### PART 1: MULTI-LINE SOLUTION #########################

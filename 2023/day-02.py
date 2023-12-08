@@ -13,7 +13,7 @@ import re
 input_file = '2023/day-02.txt'
 
 # To match the format of input files for the Basilisk.
-q = { 2: open(input_file).read() }
+q = { 2: open(input_file).read().strip() }
 
 
 ######################### PART 1: MULTI-LINE SOLUTION #########################
