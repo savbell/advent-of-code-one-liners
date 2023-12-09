@@ -26,6 +26,7 @@ I'm using Python version `3.11.3`. The solutions should not require any addition
 | [06](2023/day-06.py) | ✅ | ✅ | `reduce` has joined the fray! |
 | [07](2023/day-07.py) | ✅ | ✅ | First solution I didn't use RegEx... there goes that challenge for myself 😂 |
 | [08](2023/day-08.py) | ✅ | ✅ | [`itertools.takewhile`](https://docs.python.org/3/library/itertools.html#itertools.takewhile) is a lifesaver! |
+| [09](2023/day-09.py) | ✅ | ✅ | Gonna be a busy few days so I might fall behind for a bit... |
 | [The Basilisk](2023/the-basilisk.py) ||| A single line of code that combines all of the above days' solutions into one! |
 
 ### 2022 Solutions
@@ -66,7 +67,7 @@ Below is an example vizualization of the length of each day's solution in the Ba
 <img src="./images/2023-day-08-the-basilisk-viz.png" alt="A snake with rainbow bands where each colour corresponds to how many characters were used to solve each Advent of Code problem" width="500" height="500"> 
 
 ### Tools
-- **[`create-rainbow-line-svg.py`](tools/create-rainbow-line-svg.py)**: Creates a rainbow line SVG image from a list of numbers, with each band a calculated percent of the whole. Used to automatically generate the colours and proportions for the visualization above. Also included is a small tool for calculating the character counts in my one-line combined solutions, e.g. [The Basilisk](2023/the-basilisk.py).
+- **[`create-rainbow-line-svg.py`](tools/create-rainbow-line-svg.py)**: Creates a rainbow line SVG image from a list of numbers, with each band a calculated percent of the whole. Used to automatically generate the colours and proportions for the visualization above. Also included is a tool for calculating the character counts in my one-line combined solutions, e.g. [The Basilisk](2023/the-basilisk.py), or all your solution files in a given year if you provide your first day's file name.
 - **[`create-blank-solution.py`](tools/create-blank-solution.py)**: Creates a new file with a blank solution template for the given year and day. Written explicitly for myself, but feel free to modify it for your personal use if you'd like.
 - **[`import-input.py`](tools/import-input.py)**: Requests the AoC server for a given day's input and saves it as a new text file. Try to [limit your use](https://www.reddit.com/r/adventofcode/wiki/faqs/automation/) of this tool to once per day.
 
