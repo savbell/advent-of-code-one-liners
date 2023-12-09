@@ -5,6 +5,8 @@ I originally attempted this in 2022 and made it through about a dozen days. I'm 
 
 Note that per copyright and [Eric Wastl's request](https://www.reddit.com/r/adventofcode/wiki/faqs/copyright/inputs/), input files are not included in this repository, so you must replace the file paths if you would like to run this code.
 
+I'm using Python version `3.11.3`. The solutions should not require any additional packages (I'm only importing from the [Python Standard Library](https://docs.python.org/3/library/index.html)), but in the [tools](#tools) folder, I have a script for importing the input files from the Advent of Code server that uses [`requests`](https://pypi.org/project/requests/) and a visualization tool that uses [`matplotlib`](https://pypi.org/project/matplotlib/) and [`svgwrite`](https://pypi.org/project/svgwrite).
+
 ## Progress Tracking
 | Status | Description |
 | ------ | ----------- |

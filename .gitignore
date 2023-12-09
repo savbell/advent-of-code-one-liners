@@ -1,6 +1,13 @@
-# Ignore input files
+# Ignore input files but not requirements
 *.txt
+!requirements.txt
 
 # Ignore personal working files
 */scratchpad.py
 *.ai
+
+# Ignore virtual environment files
+.env
+.venv
+env/
+venv/
