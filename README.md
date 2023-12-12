@@ -28,8 +28,8 @@ I'm using Python version `3.11.3`. The solutions should not require any addition
 | [08](2023/day-08.py) | ✅ | ✅ | [`itertools.takewhile`](https://docs.python.org/3/library/itertools.html#itertools.takewhile) is a lifesaver! |
 | [09](2023/day-09.py) | ✅ | ✅ | Gonna be a busy few days so I might fall behind for a bit... |
 | [10](2023/day-10.py) | ✍ | ❌ |  |
-| [11](2023/day-11.py) | ✅ | ✅ | So glad I didn't need to modify my approach for part 2! |
-| [12](2023/day-12.py) | ❌ | ❌ |  |
+| [11](2023/day-11.py) | ✅ | ✅ | So glad I didn't need to modify my approach for Part 2! |
+| [12](2023/day-12.py) | ✅ | ✍ | A bit slow for Part 1; will optimize after finishing Part 2 |
 | [The Basilisk](2023/the-basilisk.py) ||| A single line of code that combines all of the above days' solutions into one! |
 
 ### 2022 Solutions
