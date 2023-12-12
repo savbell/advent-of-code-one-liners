@@ -27,6 +27,9 @@ I'm using Python version `3.11.3`. The solutions should not require any addition
 | [07](2023/day-07.py) | ✅ | ✅ | First solution I didn't use RegEx... there goes that challenge for myself 😂 |
 | [08](2023/day-08.py) | ✅ | ✅ | [`itertools.takewhile`](https://docs.python.org/3/library/itertools.html#itertools.takewhile) is a lifesaver! |
 | [09](2023/day-09.py) | ✅ | ✅ | Gonna be a busy few days so I might fall behind for a bit... |
+| [10](2023/day-10.py) | ✍ | ❌ |  |
+| [11](2023/day-11.py) | ✅ | ✅ | So glad I didn't need to modify my approach for part 2! |
+| [12](2023/day-12.py) | ❌ | ❌ |  |
 | [The Basilisk](2023/the-basilisk.py) ||| A single line of code that combines all of the above days' solutions into one! |
 
 ### 2022 Solutions
