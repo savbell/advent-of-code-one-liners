@@ -22,7 +22,7 @@ Challenge: Solve every day in a single line of Python code.
 input_file = '2023/day-{day:02}.txt'
 
 # To match the format of input files for the Basilisk.
-q = {{ {day}: open(input_file).read() }}
+q = {{ {day}: open(input_file).read().strip() }}
 
 
 ######################### PART 1: MULTI-LINE SOLUTION #########################
@@ -43,4 +43,4 @@ q = {{ {day}: open(input_file).read() }}
 
 
 ################################# EXECUTION #################################
-create_aoc_template(9, '2023/')
+create_aoc_template(14, '2023/')
