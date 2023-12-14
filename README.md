@@ -14,6 +14,7 @@ I'm using Python version `3.11.3`. The solutions should not require any addition
 | ✍     | Working on original solution |
 | ⭐     | Original (OG) solution finished, working on one-line solution |
 | ✅     | Completed both OG and one-line solutions |
+| ☑️     | Completed both solutions with help from others on the multi-line part |
 
 ### 2023 Solutions
 | Day              | Part 1 | Part 2 | Commentary |
@@ -22,14 +23,14 @@ I'm using Python version `3.11.3`. The solutions should not require any addition
 | [02](2023/day-02.py) | ✅ | ✅ | Getting in a lot of RegEx practice this year! |
 | [03](2023/day-03.py) | ✅ | ✅ | Oh boy, the amount of RegEx I'm using is slowing down my computer... and [the Walrus](https://docs.python.org/3/whatsnew/3.8.html#assignment-expressions) is back! |
 | [04](2023/day-04.py) | ✅ | ✅ | Pulling out some [dunder (magic) methods](https://docs.python.org/3/reference/datamodel.html#special-method-names) for this one! |
-| [05](2023/day-05.py) | ✅ | ✅ | `lambda`s are making their first appearance... And credit to [Dylan Gray](https://github.com/DylanDmitri) for his immense help with my Part 2 OG solution! |
+| [05](2023/day-05.py) | ✅ | ☑️ | `lambda`s are making their first appearance... And credit to [Dylan Gray](https://github.com/DylanDmitri) for his immense help with my Part 2 OG solution! |
 | [06](2023/day-06.py) | ✅ | ✅ | `reduce` has joined the fray! |
 | [07](2023/day-07.py) | ✅ | ✅ | First solution I didn't use RegEx... there goes that challenge for myself 😂 |
 | [08](2023/day-08.py) | ✅ | ✅ | [`itertools.takewhile`](https://docs.python.org/3/library/itertools.html#itertools.takewhile) is a lifesaver! |
 | [09](2023/day-09.py) | ✅ | ✅ | Gonna be a busy few days so I might fall behind for a bit... |
 | [10](2023/day-10.py) | ✍ | ❌ |  |
 | [11](2023/day-11.py) | ✅ | ✅ | So glad I didn't need to modify my approach for Part 2! |
-| [12](2023/day-12.py) | ✅ | ✍ | A bit slow for Part 1; will optimize after finishing Part 2 |
+| [12](2023/day-12.py) | ✅ | ☑️ | Credit to [Søren Fuglede Jørgensen](https://github.com/fuglede) for their solution for Part 2! |
 | [13](2023/day-13.py) | ✍ | ❌ |  |
 | [14](2023/day-14.py) | ✅ | ✅ | The hardest part is always the `while` loops! |
 | [The Basilisk](2023/the-basilisk.py) ||| A single line of code that combines all of the above days' solutions into one! |

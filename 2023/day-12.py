@@ -5,6 +5,7 @@ Challenge: Solve every day in a single line of Python code.
            See full progress at https://github.com/savbell/advent-of-code-one-liners
 '''
 
+from functools import cache
 from itertools import product
 import re
 
@@ -49,7 +50,32 @@ print('Day 12 Part 1:',sum([not (r:=set()) and [r.update([''.join(c) for c in pr
 
 
 ######################## PART 2: MULTI-LINE SOLUTION ##########################
-# Working on it...
+########## Credit to Søren Fuglede Jørgensen for the their solution!! #########
+######################## https://github.com/fuglede ###########################
+springs = [x.split() for x in q[12].strip().split('\n')]
+springs = [(x[0], tuple(map(int, x[1].split(',')))) for x in springs]
+springs =[('?'.join([x[0]] * 5) + '.', x[1] * 5) for x in springs]
+
+@cache
+def count_permutations(symbols, counts, group_loc=0):
+    if not symbols:
+        return not counts and not group_loc
+    results = 0
+    possibilities = ['.', '#'] if symbols[0] == '?' else symbols[0]
+    for p in possibilities:
+        if p == '#':
+            results += count_permutations(symbols[1:], counts, group_loc + 1)
+        else:
+            if group_loc > 0:
+                if counts and counts[0] == group_loc:
+                    results += count_permutations(symbols[1:], counts[1:])
+            else:
+                results = results + count_permutations(symbols[1:], counts)
+    return results
+
+counts = [count_permutations(s[0], s[1]) for s in springs]
+
+print('Day 12 Part 2:',sum(counts))
 
 ########################## PART 2: ONE-LINE SOLUTION ##########################
-# Haven't started yet...
+print('Day 12 Part 2:',sum((count_permutations:=cache(lambda symbols, counts, group_loc=0: (not (results:=0) and [(results:=results+count_permutations(symbols[1:], counts, group_loc + 1)) if p == '#' else 1 and (group_loc > 0 and (counts and counts[0] == group_loc and (results:=results+count_permutations(symbols[1:], counts[1:])))) or (group_loc == 0 and (results:=results+count_permutations(symbols[1:], counts))) if p != '#' else 1 for p in (['.', '#'] if symbols[0] == '?' else symbols[0])] and results) if symbols else not counts and not group_loc)) and [count_permutations(s[0], s[1]) for s in [('?'.join([x[0]] * 5) + '.', x[1] * 5) for x in [(x[0], tuple(map(int, x[1].split(',')))) for x in [x.split() for x in q[12].strip().split('\n')]]]]))
