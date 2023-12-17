@@ -34,6 +34,7 @@ I'm using Python version `3.11.3`. The solutions should not require any addition
 | [13](2023/day-13.py) | ✍ | ❌ |  |
 | [14](2023/day-14.py) | ✅ | ✅ | The hardest part is always the `while` loops! |
 | [15](2023/day-15.py) | ✅ | ✅ | My fastest solve yet! |
+| [16](2023/day-16.py) | ✅ | ✅ | Let's just ignore the `setrecursionlimit(30000)`... |
 | [The Basilisk](2023/the-basilisk.py) ||| A single line of code that combines all of the above days' solutions into one! |
 
 ### 2022 Solutions
