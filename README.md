@@ -31,11 +31,12 @@ I'm using Python version `3.11.3`. The solutions should not require any addition
 | [10](2023/day-10.py) | ✅ | ✅ | Not sure why this one took me until Day 17 to solve, but we finally did it! Proud of my Part 2 😁 |
 | [11](2023/day-11.py) | ✅ | ✅ | So glad I didn't need to modify my approach for Part 2! |
 | [12](2023/day-12.py) | ✅ | ☑️ | Credit to [Søren Fuglede Jørgensen](https://github.com/fuglede) for their solution for Part 2! |
-| [13](2023/day-13.py) | ✍ | ❌ |  |
+| [13](2023/day-13.py) | ✅ | ✅ | I did go back and rewrite Part 1 after solving Part 2. This one took me a while for some reason! |
 | [14](2023/day-14.py) | ✅ | ✅ | The hardest part is always the `while` loops! |
 | [15](2023/day-15.py) | ✅ | ✅ | My fastest solve yet! |
 | [16](2023/day-16.py) | ✅ | ✅ | Let's just ignore the `setrecursionlimit(30000)`... |
-| [17](2023/day-17.py) | ❌ | ❌ |  |
+| [17](2023/day-17.py) | ✍ | ❌ |  |
+| [18](2023/day-18.py) | ⭐ | ✍ |  |
 | [The Basilisk](2023/the-basilisk.py) ||| A single line of code that combines all of the above days' solutions into one! |
 
 ### 2022 Solutions
